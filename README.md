@@ -1,0 +1,1 @@
+# Dagger typesafe heterogeneous container
