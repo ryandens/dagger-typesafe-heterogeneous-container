@@ -1,23 +1,21 @@
 package com.github.ryandens.dagger.thc.a;
 
-/**
- * A message specific to module A.
- */
+/** A message specific to module A. */
 public final class MessageA {
 
-    private final String messageA;
-    private final int count;
+  private final String messageA;
+  private final int count;
 
-    public MessageA(String messageA, int count) {
-        this.messageA = messageA;
-        this.count = count;
-    }
+  public MessageA(String messageA, int count) {
+    this.messageA = messageA;
+    this.count = count;
+  }
 
-    public String messageA() {
-        return messageA;
-    }
+  public String messageA() {
+    return messageA;
+  }
 
-    public int count() {
-        return count;
-    }
+  public int count() {
+    return count;
+  }
 }

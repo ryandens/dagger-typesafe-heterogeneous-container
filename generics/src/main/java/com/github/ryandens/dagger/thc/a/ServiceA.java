@@ -4,8 +4,8 @@ import com.github.ryandens.dagger.thc.Service;
 
 final class ServiceA implements Service<MessageA> {
 
-    @Override
-    public MessageA getMessage() {
-        return new MessageA("Hello from service A!", 5);
-    }
+  @Override
+  public MessageA getMessage() {
+    return new MessageA("Hello from service A!", 5);
+  }
 }

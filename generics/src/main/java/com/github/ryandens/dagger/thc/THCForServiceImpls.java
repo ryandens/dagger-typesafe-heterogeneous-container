@@ -15,8 +15,8 @@ public final class THCForServiceImpls {
   }
 
   public <T> Service<T> get(final Class<T> clazz) {
-      @SuppressWarnings("unchecked")
-      final var service = (Service<T>) keyObjectHashMap.get(clazz);
-      return service;
+    @SuppressWarnings("unchecked")
+    final var service = (Service<T>) keyObjectHashMap.get(clazz);
+    return service;
   }
 }

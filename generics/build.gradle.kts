@@ -6,7 +6,6 @@ application {
     mainClassName = "com.github.ryandens.dagger.thc.Main"
 }
 
-
 dependencies {
     val daggerVersion = "2.27"
     implementation("com.google.dagger", "dagger", daggerVersion)
