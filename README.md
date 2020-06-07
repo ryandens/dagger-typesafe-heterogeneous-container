@@ -1,1 +1,4 @@
-# Dagger typesafe heterogeneous container
+# Dagger typesafe heterogeneous container ![Gradle](https://github.com/ryandens/dagger-typesafe-heterogeneous-container/workflows/Gradle/badge.svg?branch=master)
+Demonstrates how to use dagger primitives to build and provide a typesafe heterogenous container, as described by item 33 of Effective Java.
+
+This repository does not exist to demonstrate the usefulness of a typesafe heterogenous container, but rather how one might build one to be populated with instances that dagger is already responsible for building. I've found this most useful in architectures where services have at least two important lifcycle events: registration and lookup.
