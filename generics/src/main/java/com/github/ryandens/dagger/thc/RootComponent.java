@@ -5,5 +5,5 @@ import dagger.Component;
 @Component(modules = {RootModule.class})
 public interface RootComponent {
 
-  TypesafeHeterogeneousContainer container();
+  THCForServiceImpls services();
 }

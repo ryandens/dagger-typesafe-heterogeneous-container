@@ -1,6 +1,6 @@
 package com.github.ryandens.dagger.thc.b;
 
-import com.github.ryandens.dagger.thc.Registration;
+import com.github.ryandens.dagger.thc.ServiceRegistration;
 import dagger.Module;
 import dagger.Provides;
 import dagger.multibindings.IntoSet;
@@ -10,7 +10,7 @@ public final class ModuleB {
 
   @Provides
   @IntoSet
-  static Registration<?> provideRegistration() {
-    return Registration.of(ServiceB.class, new ServiceB());
+  static ServiceRegistration<?> provideRegistration() {
+    return ServiceRegistration.of(MessageB.class, new ServiceB());
   }
 }

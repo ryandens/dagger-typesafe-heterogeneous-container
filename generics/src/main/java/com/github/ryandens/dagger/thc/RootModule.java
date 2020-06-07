@@ -11,9 +11,9 @@ import java.util.Set;
 public final class RootModule {
 
   @Provides
-  static TypesafeHeterogeneousContainer provide(final Set<Registration<?>> registrations) {
-    final var container = new TypesafeHeterogeneousContainer();
-    registrations.forEach(container::put);
+  static THCForServiceImpls provide(final Set<ServiceRegistration<?>> serviceRegistrations) {
+    final var container = new THCForServiceImpls();
+    serviceRegistrations.forEach(container::put);
     return container;
   }
 }

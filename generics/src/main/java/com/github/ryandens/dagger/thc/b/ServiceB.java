@@ -2,7 +2,7 @@ package com.github.ryandens.dagger.thc.b;
 
 import com.github.ryandens.dagger.thc.Service;
 
-public final class ServiceB implements Service<MessageB> {
+final class ServiceB implements Service<MessageB> {
 
     @Override
     public MessageB getMessage() {
