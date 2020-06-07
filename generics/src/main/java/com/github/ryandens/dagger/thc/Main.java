@@ -9,8 +9,10 @@ public final class Main {
     final var rootComponent = DaggerRootComponent.create();
     final var container = rootComponent.container();
     final var serviceA = container.get(ServiceA.class);
-    System.out.println(serviceA.customServiceAMessage());
+    System.out.println(serviceA.getMessage().messageA());
+    System.out.println(serviceA.getMessage().count());
     final ServiceB serviceB = container.get(ServiceB.class);
-    System.out.println(serviceB.customServiceBMessage());
+    System.out.println(serviceB.getMessage().messageB());
+    System.out.println(serviceB.getMessage().enabled());
   }
 }

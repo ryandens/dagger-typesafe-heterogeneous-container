@@ -1,8 +1,11 @@
 package com.github.ryandens.dagger.thc.b;
 
-public final class ServiceB {
+import com.github.ryandens.dagger.thc.Service;
 
-  public String customServiceBMessage() {
-    return "Hello from service B!";
-  }
+public final class ServiceB implements Service<MessageB> {
+
+    @Override
+    public MessageB getMessage() {
+        return new MessageB("Hello from service B!", true);
+    }
 }
