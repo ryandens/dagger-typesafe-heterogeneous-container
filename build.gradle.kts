@@ -1,23 +1,27 @@
 plugins {
-    id("com.diffplug.gradle.spotless") version "3.28.1"
+    id("com.diffplug.spotless") version "5.1.1"
 }
 
 allprojects {
-    apply(plugin = "com.diffplug.gradle.spotless")
+    apply(plugin = "com.diffplug.spotless")
     apply<JavaPlugin>()
     spotless {
-        java {
-            removeUnusedImports()
-            googleJavaFormat()
-        }
         kotlinGradle {
             ktlint()
         }
     }
 
     configure<JavaPluginConvention> {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_14
+        targetCompatibility = JavaVersion.VERSION_14
+    }
+
+    tasks.withType<JavaCompile>() {
+        options.compilerArgs.add("--enable-preview")
+    }
+
+    tasks.withType<JavaExec>() {
+        jvmArgs = listOf("--enable-preview")
     }
 }
 
