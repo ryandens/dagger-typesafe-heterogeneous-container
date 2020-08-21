@@ -11,6 +11,6 @@ public final class ModuleB {
   @Provides
   @IntoSet
   static Registration<?> provideRegistration(final ServiceB serviceB) {
-    return Registration.of(ServiceB.class, serviceB);
+    return new Registration<>(ServiceB.class, serviceB);
   }
 }
