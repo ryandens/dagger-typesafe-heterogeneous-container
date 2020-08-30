@@ -11,7 +11,7 @@ public final class TypesafeHeterogeneousContainer {
   }
 
   public <T> void put(final Registration<T> registration) {
-    keyObjectHashMap.put(registration.clazz(), registration.value());
+    keyObjectHashMap.put(registration.key(), registration.value());
   }
 
   public <T> T get(final Class<T> clazz) {
